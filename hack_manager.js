@@ -116,7 +116,7 @@ function gatherAnalytics(ns) {
 		if (analyticsData[dto.target] === undefined) {
 			analyticsData[dto.target] = {}
 			analyticsData[dto.target].totalHacked = dto.value
-		} else if (analyticsData[dto.target].value === undefined) {
+		} else if (analyticsData[dto.target].totalHacked === undefined) {
 			analyticsData[dto.target].totalHacked = dto.value
 		} else {
 			analyticsData[dto.target].totalHacked += dto.value
