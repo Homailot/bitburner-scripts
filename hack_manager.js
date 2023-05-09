@@ -89,7 +89,7 @@ class HackManager {
 			this.runningScripts[i] = findAndRun(ns, "grow.js", threads, servers, target)
 		} else {
 			let threads = Math.ceil(ns.hackAnalyzeThreads(
-				target, 0.5 * ns.getServerMaxMoney(target)
+				target, 0.1 * ns.getServerMaxMoney(target)
 			))
 
 			this.runningScripts[i] = findAndRun(ns, "hack.js", threads, servers, target)
@@ -107,7 +107,6 @@ function gatherAnalytics(ns) {
 	} else {
 		analyticsData = JSON.parse(analyticsString)
 	}
-
 
 	let data
 	while ((data = ns.readPort(1)) != "NULL PORT DATA") {
